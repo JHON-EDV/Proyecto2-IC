@@ -1,0 +1,1 @@
+data = load('Data\data_2\exp1.mat','mejor_FIS');
