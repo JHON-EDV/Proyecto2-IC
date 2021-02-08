@@ -3,7 +3,7 @@
 % Carga de variables individuales
 clc; clear all; close all;
 
-experimento = 4;
+experimento = 1;
 
  for q=1:1:15
      fprintf('Cargando los datos del experimento %d \n',q);    
@@ -25,7 +25,7 @@ experimento = 4;
      semax(q,:) = load(['Data\data_',num2str(experimento),'\exp',num2str(q),'.mat'],'semax');
      Vs0(q,:) = load(['Data\data_',num2str(experimento),'\exp',num2str(q),'.mat'],'vs0');
      Vsf(q,:) = load(['Data\data_',num2str(experimento),'\exp',num2str(q),'.mat'],'vsf');     
-  end 
+ end 
 
 
 reglas = cell2mat( struct2cell( reglas) );
@@ -42,7 +42,7 @@ save(['data_',num2str(experimento),'_exp'],...
 
 clc; clear all; close all;
 
-experimento = 2;
+experimento = 1;
 tic
 for q=1:1:15 
     fprintf('Cargando los datos del experimento %d \n',q);
@@ -72,7 +72,7 @@ save(['data_numero_',num2str(experimento),'_exp'],...
 %CSV and unify 
 clc; clear all; close all;
 
-experimento=5;
+experimento=1;
 
 load(['data_',num2str(experimento),'_exp','.mat']);
 load(['data_numero_',num2str(experimento),'_exp','.mat']);
