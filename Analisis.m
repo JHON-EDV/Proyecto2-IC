@@ -42,7 +42,7 @@ save(['data_',num2str(experimento),'_exp'],...
 
 clc; clear all; close all;
 
-experimento = 3;
+experimento = 2;
 tic
 for q=1:1:15 
     fprintf('Cargando los datos del experimento %d \n',q);
@@ -68,3 +68,25 @@ end
 toc
 save(['data_numero_',num2str(experimento),'_exp'],...
     'trainError','chkError');
+%% 
+%CSV and unify 
+clc; clear all; close all;
+
+experimento=5;
+
+load(['data_',num2str(experimento),'_exp','.mat']);
+load(['data_numero_',num2str(experimento),'_exp','.mat']);
+
+chkError = chkError';
+trainError = trainError';
+
+chkError = chkError(1,[1:15,17:21]);
+trainError = trainError(1,[1:15,17:21]);
+
+save(['data_total_',num2str(experimento),'_exp'],...
+    'reglas','Nit','tasa','nrun','semax','Vs0','Vsf','trainError','chkError');
+
+writematrix([reglas',Nit',tasa',nrun',semax',Vs0',Vsf',trainError',chkError'], ['exp_',num2str(experimento),'.csv']);
+
+
+
