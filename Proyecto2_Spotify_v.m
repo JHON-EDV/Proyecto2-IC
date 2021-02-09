@@ -81,17 +81,17 @@ end
 % vs0_2=var(curvas_error_2(1,:)); % varianza error de validación S , epoch inicial
 % vsf_2=var(curvas_error_2(end,:));% varianza error de validación S, epoch final
 
-% figure(1)
-% hold on;
-% for i = 1:1:length(curvas_error)
-%     plot(curvas_error(i,:))
-% end
-% 
-% figure(4),
-% hold on;
-% for i = 1:1:length(curvas_error)
-%     plot(curvas_error_entre(i,:))
-% end
+figure(1)
+hold on;
+for i = 1:1:length(curvas_error)
+    plot(curvas_error(i,:))
+end
+
+figure(4),
+hold on;
+for i = 1:1:length(curvas_error)
+    plot(curvas_error_entre(i,:))
+end
 % 
 % figure(7)
 % subplot(1,2,1)

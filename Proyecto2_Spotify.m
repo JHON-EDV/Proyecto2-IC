@@ -72,44 +72,47 @@ end
 %%
 %GRAFICAS
 
-semax=max(max(curvas_error)); % máximo error de validación S
-vs0=var(curvas_error(1,:)); % varianza error de validación S , epoch inicial
-vsf=var(curvas_error(end,:));% varianza error de validación S, epoch final
+% semax=max(max(curvas_error)); % máximo error de validación S
+% vs0=var(curvas_error(1,:)); % varianza error de validación S , epoch inicial
+% vsf=var(curvas_error(end,:));% varianza error de validación S, epoch final
+% 
+% semax_2=max(max(curvas_error_2)); % máximo error de validación S
+% vs0_2=var(curvas_error_2(1,:)); % varianza error de validación S , epoch inicial
+% vsf_2=var(curvas_error_2(end,:));% varianza error de validación S, epoch final
+close all;
 
-semax_2=max(max(curvas_error_2)); % máximo error de validación S
-vs0_2=var(curvas_error_2(1,:)); % varianza error de validación S , epoch inicial
-vsf_2=var(curvas_error_2(end,:));% varianza error de validación S, epoch final
+figure(1)
+hold on;
+for i = 1:1:length(curvas_error)
+    plot(curvas_error(i,:))
+end
 
-% figure(1)
-% hold on;
-% for i = 1:1:length(curvas_error)
-%     plot(curvas_error(i,:))
-% end
+figure(4),
+hold on;
+
+for i = 1:1:length(curvas_error)
+    plot(curvas_error_entre(i,:))
+end
+
 % 
-% figure(4),
-% hold on;
-% for i = 1:1:length(curvas_error)
-%     plot(curvas_error_entre(i,:))
-% end
-% 
-% figure(7)
-% subplot(1,2,1)
-% histogram(curvas_error(1,:));
-% set(gca,'fontsize',14);
-% xlabel('Ev_0');
-% ylabel('Conteo');
-% title('Histograma Ev_0 (S)');
-% text(0.6*semax,0.8*iteraciones,['Var=' num2str(vs0)]);
-% 
-% figure(7)
-% subplot(1,2,2)
-% histogram(curvas_error(end,:));
-% set(gca,'fontsize',14);
-% xlabel('Ev_f');
-% ylabel('Conteo');
-% title('Histograma Ev_f (S)');
-% text(0.6*semax,0.8*iteraciones,['Var=' num2str(vsf)]);
-% 
+figure(7)
+subplot(1,2,1)
+histogram(curvas_error(1,:));
+set(gca,'fontsize',14);
+xlabel('Ev_0');
+ylabel('Conteo');
+title('Histograma Ev_0 (S)');
+text(0.6*semax,0.8*nrun,['Var=' num2str(vs0)]);
+
+figure(7)
+subplot(1,2,2)
+histogram(curvas_error(end,:));
+set(gca,'fontsize',14);
+xlabel('Ev_f');
+ylabel('Conteo');
+title('Histograma Ev_f (S)');
+text(0.6*semax,0.8*nrun,['Var=' num2str(vsf)]);
+
 % [max_pset,w] = sort(yv);
 % yoo = pset(w);
 % yhh = max_pset(w);
