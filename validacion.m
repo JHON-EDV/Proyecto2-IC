@@ -1,7 +1,7 @@
 close all; clc; clear all;
 
-experimento = 5;%,4,5
-q = 9; %13, 9;
+experimento = 3;%,4,5
+q = 14; %13, 9;
 
 
 ClassHitF = load(['Data\data_',num2str(experimento),'\exp',num2str(q),'.mat'],'mejor_FIS_validacion');
@@ -25,6 +25,6 @@ plot(x,y,'.');
 hold on
 legend('no hit','hit')  
 axis([0 length(s(:,1)) 0 1])
-csvwrite(['Salida_2.csv'],s);
+csvwrite(['Salida.csv'],s);
 fprintf('csv ok \n');    
 %%
