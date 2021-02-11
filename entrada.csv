@@ -1,11 +1,25 @@
-﻿;Base de Datos;Clasificación;;;;;
-;;No Hit;Hit;;total ;23656;
-;No Hit;9574;1624;;;;
-;Hit ;8689;3769;;tasa de aciertos;0,5640;
-;;;;;tasa de error;0,4360;
-;;;;;;;
-;;;;;Especifidad;0,524229316;
-;;;;;Sensibilidad;0,698868904;
-;;;;;;;
-;;;;;tasa de falsos no hit;0,475770684;
-;;;;;tasa de falsos hit;0,30113110;
+﻿Base de Datos;Clasificación;;;;;;Base de Datos;Clasificación;;;;;;Base de Datos;Clasificación;;;;
+;No Hit;Hit;;total ;23656;;;No Hit;Hit;;total ;23656;;;No Hit;Hit;;total ;23656
+No Hit;1647;9551;;;;;No Hit;6962;5990;;;;;No Hit;105;11093;;;
+Hit ;3238;9220;;tasa de aciertos;0,4594;;Hit ;3436;7268;;tasa de aciertos;0,6015;;Hit ;274;12184;;tasa de aciertos;0,5195
+;;;;tasa de error;0,5406;;;;;;tasa de error;0,3985;;;;;;tasa de error;0,4805
+;;;;;;;;;;;;;;;;;;;
+;;;;Especifidad;0,337154555;;;;;;Especifidad;0,669551837;;;;;;Especifidad;0,277044855
+;;;;Sensibilidad;0,491183208;;;;;;Sensibilidad;0,548197315;;;;;;Sensibilidad;0,523435151
+;;;;;;;;;;;;;;;;;;;
+;;;;tasa de falsos no hit;0,662845445;;;;;;tasa de falsos no hit;0,330448163;;;;;;tasa de falsos no hit;0,722955145
+;;;;tasa de falsos hit;0,50881679;;;;;;tasa de falsos hit;0,45180269;;;;;;tasa de falsos hit;0,47656485
+;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+Mejores 3 modelos;;;;;;;;;;;;;;;;;;;
+Reglas;Nit;tasa;Nrun;Error de validacion;Varianza inicial ;Varianza final;;;;;;;;;;;;;
+46;80;0,01;80;0,5986;7,57E-08;8,29E-07;;;;;;;;;;;;;
+24;80;0,01;80;0,135813;1,7172E-08;5,92E-08;;;;;;;;;;;;;
+24;50;0,01;80;0,1947;4,42E-08;3,63E-06;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+Mejores 3 modelos;;;;;;;;;;;;;;;;;;;
+Reglas;Nit;tasa;Nrun;Error de clasificación Hit;Error de clasificación No Hit;Error de clasificación total;;;;;;;;;;;;;
+46;80;0,01;80;0,5088;0,6628;0,5406;;;;;0,61;;;;;;;;
+24;80;0,01;80;0,37863;0,4058;0,3906;;;;;;;;;;;;;
+24;50;0,01;80;0,4762;0,7229;0,4805;;;;;;;;;;;;;

@@ -1,7 +1,7 @@
 close all; clc; clear all;
 
-experimento = 3;%,4,5
-q = 14; %13, 9;
+experimento = 4;%,4,5
+q = 13; %13, 9;
 
 
 ClassHitF = load(['Data\data_',num2str(experimento),'\exp',num2str(q),'.mat'],'mejor_FIS_validacion');

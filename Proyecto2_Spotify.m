@@ -86,6 +86,9 @@ hold on;
 for i = 1:1:length(curvas_error)
     plot(curvas_error(i,:))
 end
+xlabel('Epochs');
+ylabel('Ev');
+title('Itercaciones');
 
 figure(4),
 hold on;
@@ -93,7 +96,9 @@ hold on;
 for i = 1:1:length(curvas_error)
     plot(curvas_error_entre(i,:))
 end
-
+xlabel('Epochs');
+ylabel('Ev');
+title('Corridas');
 % 
 figure(7)
 subplot(1,2,1)
